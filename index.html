@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>시계화면 만들기</title>
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+</head>
+<body>
+    <div class = "hw-clock">
+        <div class = "js-date">
+            <h2 class = "YMD">0000-00-00 일요일</h2>
+        </div>
+        <div class="js-clock">
+            <span>00:00:00</span>
+            <img class="clock-img clock" src="/alarm2.png" alt="alarm clock icon">
+        </div>
+        <div class = "alarm-register">
+            <input type = "text" placeholder = "00-23" class = "alarmHour">시
+            <input type = "text" placeholder = "00-59" class = "alarmMin">분
+            <button onclick = "javascript:alarmRegister()">설정하기</button>
+        </div>
+        <div class = "alarm-ringing">
+        </div>
+    </div>
+    <script src="./js/clock.js"></script>
+    <script src="./js/date.js"></script>
+    <script src = "./js/alarm.js"></script>
+</body>
+</html>

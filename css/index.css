@@ -1,0 +1,109 @@
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p, b,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+body {
+	line-height: 1;
+    font-family: "맑음고딕", "나눔고딕", nanum-gothic, "돋움", dotum;
+    color: white;
+    background: radial-gradient(rgb(32, 9, 66), 30%, black);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation: huerotator 15s ease infinite;
+    text-shadow:0px 0px 1rem #0004e4;
+}
+
+@keyframes huerotator {
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+div.hw-clock{
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    margin-top: 200px;
+}
+
+div.js-clock {
+    padding-top: 10px;
+	font-size: 60px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+div.js-date {
+    text-align: center;
+    font-weight: lighter;
+}
+
+.day {
+    display: block;
+    margin: 5px;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+.clock-img {
+    width: 100%;
+    text-align: center;
+    padding-left: 20px;
+    padding-top: 35px;
+    filter: invert(100%);
+    position: absolute;
+}
+
+img.clock {
+    width: 20px;
+	height: auto;
+    margin: 0 auto;
+}
+
+.alarm-register {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.alarm-register > input {
+    width: 70px;
+    text-align: center;
+}
+
+.alarm-ringing {
+    text-align: center;
+}
+
+.ringing {
+    filter: invert(100%);
+    width: 100px;
+    height: auto;
+    margin-top: 30px;
+    animation: bell 6s infinite linear;
+}
+
+@keyframes bell{
+    0%, 50%{
+      transform: rotate(0deg);
+      filter: drop-shadow(0px 0px 4px rgb(141, 139, 21)) invert(100%);
+      }
+    5%, 15%, 25%, 35%, 45% {
+      transform: rotate(13deg);
+      filter: drop-shadow(0px 0px 4px rgb(82, 68, 24)) invert(100%);
+    }
+    10%, 20%, 30%, 40% {
+      transform: rotate(-13deg);
+      filter: drop-shadow(0px 0px 20px rgb(59, 35, 13)) invert(100%);
+    }
+  }
